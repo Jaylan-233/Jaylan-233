@@ -4,17 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo个人博客搭建, Jaylan|个人博客">
-    <meta name="description" content="Hexo框架搭建个人博客并部署到Github使用Hexo搭建博客环境配置所需要安装的软件和环境
-
-Git
-Nodejs
-npm
+    <meta name="keywords" content="Github+PicGo搭建图床, Jaylan|个人博客">
+    <meta name="description" content="Github+PicGo搭建图床创建一个用来存放图片的仓库
+配置PicGo获取GitHub的token
 
 
-安装Nodejs的同时会安装npm
 
-Nodejs和npm下载下载地址Node.js (nodejs.org">
+
+配置PicGo
+查看结果
+其他设置设置Typora自动上传图片到图床
+参考教程如何利用 Github 搭建自己的免费图床？ - ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +26,7 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo个人博客搭建 | Jaylan|个人博客</title>
+    <title>Github+PicGo搭建图床 | Jaylan|个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -260,12 +260,12 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo个人博客搭建</h1>
+                    <h1 class="description center-align post-title">Github+PicGo搭建图床</h1>
                 </div>
             </div>
         </div>
@@ -289,8 +289,8 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/">
+                                <span class="chip bg-color">博客优化</span>
                             </a>
                         
                     </div>
@@ -326,57 +326,16 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hexo框架搭建个人博客并部署到Github"><a href="#Hexo框架搭建个人博客并部署到Github" class="headerlink" title="Hexo框架搭建个人博客并部署到Github"></a>Hexo框架搭建个人博客并部署到Github</h1><h1 id="使用Hexo搭建博客"><a href="#使用Hexo搭建博客" class="headerlink" title="使用Hexo搭建博客"></a>使用Hexo搭建博客</h1><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>所需要安装的软件和环境</p>
-<ol>
-<li>Git</li>
-<li>Nodejs</li>
-<li>npm</li>
-</ol>
-<blockquote>
-<p>安装Nodejs的同时会安装npm</p>
-</blockquote>
-<h2 id="Nodejs和npm"><a href="#Nodejs和npm" class="headerlink" title="Nodejs和npm"></a>Nodejs和npm</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下载地址<a target="_blank" rel="noopener" href="https://nodejs.org/en">Node.js (nodejs.org)</a></p>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/ee147e84-f8a5-45e9-a95b-253f31f6c109.png" alt="image.png"></p>
-<p>安装过程</p>
-<p><a target="_blank" rel="noopener" href="https://desktop.craft.do:6776/editor/d/1cf7cef4-ee3a-97e3-deb8-de111119df84/f67fa297-3b90-4171-8d8b-ee0c7c9ce4a7/x/77e770ff-a726-4351-8126-606d1c09a85a">Nodejs安装</a></p>
-<h3 id="验证是否安装完成"><a href="#验证是否安装完成" class="headerlink" title="验证是否安装完成"></a>验证是否安装完成</h3><ul>
-<li>打开命令行终端</li>
-</ul>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/c20b437e-606e-4c5c-a535-d66cafd5d2db.png" alt="image.png"></p>
-<p>检查一下是否完整</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//检查node</span></span><br><span class="line">node -v</span><br><span class="line"></span><br><span class="line"><span class="comment">//检查npm</span></span><br><span class="line">npm -v</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/0bada1b7-b61d-4f89-908c-a665e65f449c.png" alt="image.png"></p>
-<h2 id="安装Hexo框架"><a href="#安装Hexo框架" class="headerlink" title="安装Hexo框架"></a>安装Hexo框架</h2><p><code>npm install -g hexo-cli</code></p>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/d01a6570-a232-4b9b-ada5-a565377c8e75.png" alt="image.png"></p>
-<ul>
-<li>验证是否安装 成功</li>
-</ul>
-<p><code>hexo -v</code></p>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/e09ae7be-c6bc-4289-825d-a1940a2bcded.png" alt="image.png"></p>
-<h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><ul>
-<li>新建一个文件夹</li>
-</ul>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/37530318-cb86-4dd2-8118-288f5ff9e042.png" alt="image.png"></p>
-<ul>
-<li>初始化Hexo</li>
-</ul>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/c13e9730-feee-4a64-a526-829a3ea43905.png" alt="image.png"></p>
-<p>命令h<code>exo init</code></p>
-<blockquote>
-<p>在改目录下初始化hexo框架</p>
-</blockquote>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/3101fb27-7844-494c-b294-114ab8a49c54.png" alt="image.png"></p>
-<h2 id="本地启动Hexo"><a href="#本地启动Hexo" class="headerlink" title="本地启动Hexo"></a>本地启动Hexo</h2><p><code>hexo s</code></p>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/e8ef982f-0670-432f-896d-e229a22e1a90.png" alt="image.png"></p>
-<h1 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h1><h1 id="将博客部署到GitHub"><a href="#将博客部署到GitHub" class="headerlink" title="将博客部署到GitHub"></a>将博客部署到GitHub</h1><h2 id="创建一个新仓库"><a href="#创建一个新仓库" class="headerlink" title="创建一个新仓库"></a>创建一个新仓库</h2><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/709ff398-b005-49c6-bff6-da9cebd620e6.png" alt="image.png"></p>
-<h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>丢图问题</p>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/e6e826f2-583a-4312-8f91-66990711e573.png" alt="image.png"></p>
-<p>本地有图 但是推送到Github之后就没了</p>
-<p><strong>网上的解决方案</strong></p>
-<p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/6124cc6e-1940-4f9b-8403-4a34a6021f52.png" alt="image.png"></p>
-<p>得吧图片上传到指定目录下才行 但这样更麻烦了</p>
-<p>?descriptionFromFileType=function+toLocaleUpperCase()+{+[native+code]+}+File&amp;mimeType=application/octet-stream&amp;fileName=Hexo框架搭建个人博客并部署到Github.md&amp;fileType=undefined&amp;fileExtension=md</p>
+                <h1 id="Github-PicGo搭建图床"><a href="#Github-PicGo搭建图床" class="headerlink" title="Github+PicGo搭建图床"></a>Github+PicGo搭建图床</h1><h1 id="创建一个用来存放图片的仓库"><a href="#创建一个用来存放图片的仓库" class="headerlink" title="创建一个用来存放图片的仓库"></a>创建一个用来存放图片的仓库</h1><p><img src="https://raw.githubusercontent.com/Jaylan-233/blog-imgs/main/60fc0d30-c6b9-41fb-962e-f01a5eef6914" alt="image.png"></p>
+<h1 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h1><h2 id="获取GitHub的token"><a href="#获取GitHub的token" class="headerlink" title="获取GitHub的token"></a>获取GitHub的token</h2><p><img src="https://raw.githubusercontent.com/Jaylan-233/blog-imgs/main/9882bdc1-7c8d-449e-925d-38df3e65c610" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/Jaylan-233/blog-imgs/main/0e619fe5-469d-4eaa-a9cb-7f9ef8cf8aed" alt="image.png"></p>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/ad4a9fcf-ff8b-4030-a23a-4f54daf40628/a78d8898-dd9b-424e-8c73-97df4c9d5e01" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/Jaylan-233/blog-imgs/main/9ffd751f-226f-4cde-b254-049dc55a2d76" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/Jaylan-233/blog-imgs/main/52e64e72-92ba-44f1-8c4b-2dca5a70e2fa" alt="image.png"></p>
+<h2 id="配置PicGo-1"><a href="#配置PicGo-1" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><p><img src="https://raw.githubusercontent.com/Jaylan-233/blog-imgs/main/ce861632-af70-467d-9e26-08319b30391c" alt="image.png"></p>
+<h2 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h2><p><img src="https://raw.githubusercontent.com/Jaylan-233/blog-imgs/main/903b5aa6-8355-44c2-a37c-42d1cebe567a" alt="image.png"></p>
+<h1 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h1><h2 id="设置Typora自动上传图片到图床"><a href="#设置Typora自动上传图片到图床" class="headerlink" title="设置Typora自动上传图片到图床"></a>设置Typora自动上传图片到图床</h2><p><img src="https://raw.githubusercontent.com/Jaylan-233/blog-imgs/main/6b4331d3-73c6-488d-888a-b96207af5556" alt="image.png"></p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/347342082">如何利用 Github 搭建自己的免费图床？ - 知乎 (zhihu.com)</a></p>
 
                 
             </div>
@@ -403,7 +362,7 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="hhttps://Jaylan-233.github.io/2023/06/15/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hhttps://Jaylan-233.github.io/2023/06/15/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</a>
+                    <a href="hhttps://Jaylan-233.github.io/2023/06/15/Github-PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">hhttps://Jaylan-233.github.io/2023/06/15/Github-PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -441,8 +400,8 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/">
+                                    <span class="chip bg-color">博客优化</span>
                                 </a>
                             
                         </div>
@@ -521,9 +480,10 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/06/15/Github-PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">
                     <div class="card-image">
@@ -541,9 +501,9 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -552,6 +512,7 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -570,13 +531,13 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/06/15/HelloWrold/">
+                <a href="/2023/06/15/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="HelloWrold!">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Hexo个人博客搭建">
                         
-                        <span class="card-title">HelloWrold!</span>
+                        <span class="card-title">Hexo个人博客搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -600,8 +561,8 @@ Nodejs和npm下载下载地址Node.js (nodejs.org">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B5%8B%E8%AF%95/">
-                        <span class="chip bg-color">测试</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
