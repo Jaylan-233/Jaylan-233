@@ -21,44 +21,6 @@
     </entry>
     
     
-    
-    <entry>
-      <title>Hexo个人博客搭建</title>
-      <link href="/2023/06/15/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-      <url>/2023/06/15/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Hexo框架搭建个人博客并部署到Github"><a href="#Hexo框架搭建个人博客并部署到Github" class="headerlink" title="Hexo框架搭建个人博客并部署到Github"></a>Hexo框架搭建个人博客并部署到Github</h1><h1 id="使用Hexo搭建博客"><a href="#使用Hexo搭建博客" class="headerlink" title="使用Hexo搭建博客"></a>使用Hexo搭建博客</h1><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>所需要安装的软件和环境</p><ol><li>Git</li><li>Nodejs</li><li>npm</li></ol><blockquote><p>安装Nodejs的同时会安装npm</p></blockquote><h2 id="Nodejs和npm"><a href="#Nodejs和npm" class="headerlink" title="Nodejs和npm"></a>Nodejs和npm</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下载地址<a href="https://nodejs.org/en">Node.js (nodejs.org)</a></p><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/ee147e84-f8a5-45e9-a95b-253f31f6c109.png" alt="image.png"></p><p>安装过程</p><p><a href="https://desktop.craft.do:6776/editor/d/1cf7cef4-ee3a-97e3-deb8-de111119df84/f67fa297-3b90-4171-8d8b-ee0c7c9ce4a7/x/77e770ff-a726-4351-8126-606d1c09a85a">Nodejs安装</a></p><h3 id="验证是否安装完成"><a href="#验证是否安装完成" class="headerlink" title="验证是否安装完成"></a>验证是否安装完成</h3><ul><li>打开命令行终端</li></ul><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/c20b437e-606e-4c5c-a535-d66cafd5d2db.png" alt="image.png"></p><p>检查一下是否完整</p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//检查node</span></span><br><span class="line">node -v</span><br><span class="line"></span><br><span class="line"><span class="comment">//检查npm</span></span><br><span class="line">npm -v</span><br></pre></td></tr></tbody></table></figure><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/0bada1b7-b61d-4f89-908c-a665e65f449c.png" alt="image.png"></p><h2 id="安装Hexo框架"><a href="#安装Hexo框架" class="headerlink" title="安装Hexo框架"></a>安装Hexo框架</h2><p><code>npm install -g hexo-cli</code></p><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/d01a6570-a232-4b9b-ada5-a565377c8e75.png" alt="image.png"></p><ul><li>验证是否安装 成功</li></ul><p><code>hexo -v</code></p><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/e09ae7be-c6bc-4289-825d-a1940a2bcded.png" alt="image.png"></p><h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><ul><li>新建一个文件夹</li></ul><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/37530318-cb86-4dd2-8118-288f5ff9e042.png" alt="image.png"></p><ul><li>初始化Hexo</li></ul><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/c13e9730-feee-4a64-a526-829a3ea43905.png" alt="image.png"></p><p>命令h<code>exo init</code></p><blockquote><p>在改目录下初始化hexo框架</p></blockquote><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/3101fb27-7844-494c-b294-114ab8a49c54.png" alt="image.png"></p><h2 id="本地启动Hexo"><a href="#本地启动Hexo" class="headerlink" title="本地启动Hexo"></a>本地启动Hexo</h2><p><code>hexo s</code></p><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/e8ef982f-0670-432f-896d-e229a22e1a90.png" alt="image.png"></p><h1 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h1><h1 id="将博客部署到GitHub"><a href="#将博客部署到GitHub" class="headerlink" title="将博客部署到GitHub"></a>将博客部署到GitHub</h1><h2 id="创建一个新仓库"><a href="#创建一个新仓库" class="headerlink" title="创建一个新仓库"></a>创建一个新仓库</h2><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/709ff398-b005-49c6-bff6-da9cebd620e6.png" alt="image.png"></p><h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><p>丢图问题</p><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/e6e826f2-583a-4312-8f91-66990711e573.png" alt="image.png"></p><p>本地有图 但是推送到Github之后就没了</p><p><strong>网上的解决方案</strong></p><p><img src="/./Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/6124cc6e-1940-4f9b-8403-4a34a6021f52.png" alt="image.png"></p><p>得吧图片上传到指定目录下才行 但这样更麻烦了</p><p>?descriptionFromFileType=function+toLocaleUpperCase()+{+[native+code]+}+File&amp;mimeType=application/octet-stream&amp;fileName=Hexo框架搭建个人博客并部署到Github.md&amp;fileType=undefined&amp;fileExtension=md</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>HelloWrold!</title>
-      <link href="/2023/06/15/HelloWrold/"/>
-      <url>/2023/06/15/HelloWrold/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>这是我的第一篇博客!</p><p><img src="/./HelloWrold.assets/image-20230615180030815.png" alt="image-20230615180030815"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
 </search>
