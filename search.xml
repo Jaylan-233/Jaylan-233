@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>SpringBoot常见错误</title>
+      <link href="/2023/06/18/SpringBoot%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
+      <url>/2023/06/18/SpringBoot%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Failed-to-configure-a-DataSource-‘url’-attribute-is-not-specified-and-no-embedded-datasource-could-be-configured"><a href="#Failed-to-configure-a-DataSource-‘url’-attribute-is-not-specified-and-no-embedded-datasource-could-be-configured" class="headerlink" title="Failed to configure a DataSource: ‘url’ attribute is not specified and no embedded datasource could be configured."></a>Failed to configure a DataSource: ‘url’ attribute is not specified and no embedded datasource could be configured.</h1><p><strong>翻译</strong></p><blockquote><p>配置数据源失败:没有指定’url’属性，无法配置任何嵌入的数据</p></blockquote><p><strong>❌原因</strong></p><blockquote><p>项目使用了数据库 但是给其指定 相关信息 url 用户名 密码啥的</p></blockquote><p><strong>✔️解决办法</strong></p><blockquote><p>修改配置文件(<strong>application.properties</strong>) 加上数据库相关的 信息</p></blockquote><ul><li>数据库的驱动(记得看下版本 <strong>不同版本数据库的加载驱动不同</strong>)</li><li>数据库的url(记得设置时区)</li><li>数据库用户名(默认都是root)</li><li>数据库密码</li></ul><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/119448c0-128e-4af8-a34e-4751fc219a15/4e5d8042-6298-4f8e-8fa6-9eaf50040fab" alt="image.png"></p><p><strong>小结</strong></p><ul><li>没有在配置文件中设置数据库的相关信息 导致<strong>找不到数据库</strong></li></ul><h1 id="SQL-dialect-is-not-configured"><a href="#SQL-dialect-is-not-configured" class="headerlink" title="SQL dialect is not configured."></a>SQL dialect is not configured.</h1><p><strong>翻译:</strong></p><p>没有配置SQL方言(方言?)</p><blockquote><p>没有告诉IDEA SQL是哪个数据软件的 导致其无法对此进行检查</p></blockquote><p><strong>❌</strong>原因</p><blockquote><p>IDEA中没设置SQL的语言 导致SQL检查失败</p></blockquote><p><strong>✔️</strong>解决办法</p><blockquote><p>到设置中指定SQL语言</p></blockquote><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/119448c0-128e-4af8-a34e-4751fc219a15/c6bf06fa-9260-4799-bbe1-10e29303e3ad" alt="image.png"></p><h1 id="Unable-to-resolve-table-xxx"><a href="#Unable-to-resolve-table-xxx" class="headerlink" title="Unable to resolve table xxx"></a>Unable to resolve table xxx</h1><p><strong>情况</strong>: <strong>SQL语句没问题</strong> <strong>运行没问题</strong> 但IDEA 给出警告和错误 问题出现在检查上</p><p>另外还有</p><p>No data sources are configured to run this SQL and provide advanced code assistance. Disable this inspection via problem menu (Alt+Enter).</p><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/119448c0-128e-4af8-a34e-4751fc219a15/d250ac82-b66e-4c48-b1ba-624977d5407b" alt="image.png"></p><p><strong>翻译</strong></p><p>无法解析表“xxx”</p><p>没有配置任何数据源来运行此SQL并提供高级代码帮助。通过问题菜单(Alt+Enter)禁用此检查。</p><p><strong>❌原因:</strong></p><blockquote><p>IDEA 没能连接到该数据库 所以没办法进行解析以及 其他操作</p></blockquote><p><strong>✔️解决办法:</strong></p><blockquote><p>设置IDEA中的 Database工具  将其连接到要进行操作的数据库</p></blockquote><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/119448c0-128e-4af8-a34e-4751fc219a15/88352081-3940-4cf9-ba49-521c1aa6faa4" alt="image.png"></p><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/119448c0-128e-4af8-a34e-4751fc219a15/b35706f0-1d10-4f75-ba69-a1d3b9ae33c4" alt="image.png"></p><p>连接了正确的数据库之后 错误就会消失 反之 导入的数据库可能不正确</p><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/119448c0-128e-4af8-a34e-4751fc219a15/4e19af55-e7ec-4f6f-8c5c-631014caf0e0" alt="image.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SpringBoot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>阿里云OOS搭建图床</title>
       <link href="/2023/06/16/%E9%98%BF%E9%87%8C%E4%BA%91%20OSS+PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/"/>
       <url>/2023/06/16/%E9%98%BF%E9%87%8C%E4%BA%91%20OSS+PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</url>
