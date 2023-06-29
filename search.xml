@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>String StringBuffer StringBuilder</title>
+      <link href="/2023/06/29/String-StringBuffer-StringBuilder/"/>
+      <url>/2023/06/29/String-StringBuffer-StringBuilder/</url>
+      
+        <content type="html"><![CDATA[<h1 id="String-StringBuffer-StringBuilder"><a href="#String-StringBuffer-StringBuilder" class="headerlink" title="String StringBuffer StringBuilder"></a>String StringBuffer StringBuilder</h1><h2 id="为什么要区分这么多的字符串类"><a href="#为什么要区分这么多的字符串类" class="headerlink" title="为什么要区分这么多的字符串类"></a>为什么要区分这么多的字符串类</h2><blockquote><p>字符串是使用最为频繁的数据类型之一</p><p>有的字符串需要经常修改 、有的的不需要</p><p>有时需要处理大量字符、有时只要处理少量的字符串</p></blockquote><p><strong>根据操作的不同特点 使用不同的的字符串类型</strong></p><h2 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h2><ul><li>都是字符串类</li><li>都是用来处理字符串的</li></ul><h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><h3 id="执行速度"><a href="#执行速度" class="headerlink" title="执行速度"></a>执行速度</h3><p>StringBuilder &gt;StringBuffer&gt;String</p><h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p>String -线程安全</p><p>StringBuffer -线程安全</p><p>StringBuilder-线程不安全</p><h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><ul><li><p>大量</p><ul><li>单线程-StringBuilder</li><li>多线程-StringBuffer</li></ul></li><li><p>少量</p><ul><li>String</li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>接口和抽象类</title>
       <link href="/2023/06/29/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
       <url>/2023/06/29/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
