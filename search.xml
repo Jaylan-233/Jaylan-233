@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>接口和抽象类</title>
+      <link href="/2023/06/29/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
+      <url>/2023/06/29/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+      
+        <content type="html"><![CDATA[<h1 id="接口和抽象类"><a href="#接口和抽象类" class="headerlink" title="接口和抽象类"></a>接口和抽象类</h1><h2 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h2><ul><li>都能实现多态</li><li>都能增加代码的重用性</li></ul><h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><h3 id="作用方面"><a href="#作用方面" class="headerlink" title="作用方面"></a>作用方面</h3><ul><li><p>接口(只定义方法 不进行实现)</p><ul><li><p>定义了公共方法和常量 没有具体的实现</p><blockquote><p>实现接口的类叫做实现类 必须实现全部方法</p></blockquote></li></ul></li><li><p>抽象类(本质还是一个类 其中写了抽象方法)</p><ul><li><p>可以包含抽象方法和非抽象方法</p><blockquote><p>对应的实现方法可以选择 部分实现或者全部实现</p></blockquote></li></ul></li></ul><h3 id="多继承和支持"><a href="#多继承和支持" class="headerlink" title="多继承和支持"></a>多继承和支持</h3><ul><li><p>接口</p><ul><li><p>支持多继承</p><blockquote><p>一个类可以实现多个接口</p></blockquote></li></ul></li><li><p>抽象类</p><ul><li><p>一个类只能实现一个抽象类</p><blockquote><p>因为本质是类 且 类具有单继承的机制</p></blockquote></li></ul></li></ul><h3 id="类型方面"><a href="#类型方面" class="headerlink" title="类型方面"></a>类型方面</h3><ul><li>接口 –&gt; 引用型数据类型</li><li>抽线类–&gt; 类</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SpringBoot常见错误</title>
       <link href="/2023/06/18/SpringBoot%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
       <url>/2023/06/18/SpringBoot%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</url>
