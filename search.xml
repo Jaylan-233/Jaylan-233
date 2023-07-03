@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>软件过程</title>
+      <link href="/2023/07/03/%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B/"/>
+      <url>/2023/07/03/%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="软件过程"><a href="#软件过程" class="headerlink" title="软件过程()"></a>软件过程()</h1><h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h2><p>为了获取高质量软件所需要完成的一系列任务的框架,规定了完成各项任务的工作步骤</p><blockquote><p>为了能开发出高质量的软件 得按一定的开发流程来,所遵守的一整套流程被称之为软件过程(过程模型)</p></blockquote><ul><li><strong>ISO9000对软件过程的定义</strong></li></ul><p>使用资源将输入转换为输出的活动所构成的系统</p><blockquote><p>给定<strong>输入</strong>比如人员 需求,经过<strong>一系列过程</strong>得到输出即<strong>软件</strong></p></blockquote><blockquote><p>这里的一系列过程可以理解为软件过程</p></blockquote><h2 id="2-过程模型"><a href="#2-过程模型" class="headerlink" title="2.过程模型"></a>2.过程模型</h2><p>软件过程以软件生命周期为基础,</p><p><strong>但没有一个通用的软件过程</strong>能<strong>适用</strong>于<strong>所有类型的软件的开发</strong></p><p>因此开发不同的软件应根据软件的特点采用不同的软件过程(过程模型)</p><h2 id="3-常见的过程模型"><a href="#3-常见的过程模型" class="headerlink" title="3.常见的过程模型"></a>3.常见的过程模型</h2><p>1.瀑布模型</p><p>2.快速原型模型</p><p>3.增量模型</p><p>4.螺旋模型</p><p>5.喷泉模型</p><p>6.Rational统一过程</p><p>7.敏捷过程与极限编程</p><p>8.微软过程</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>软件过程是将输入(人员、需求)变为输出(满足需求的高质量软件)的过程</li><li>开发不同类型软件需要根据需要使用过程(过程模型) </li><li>软件过程也可以称之为过程模型</li><li>软件生命周期是最基本的软件模型</li><li>在生命周期的基础上进行优化扩充就可以得到不同的软件模型</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 软件工程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>String StringBuffer StringBuilder</title>
       <link href="/2023/06/29/String-StringBuffer-StringBuilder/"/>
       <url>/2023/06/29/String-StringBuffer-StringBuilder/</url>
