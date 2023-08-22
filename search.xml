@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>SpringBoot中的分层</title>
+      <link href="/2023/08/22/SpringBoot/SpringBoot%E4%B8%AD%E7%9A%84%E5%88%86%E5%B1%82/"/>
+      <url>/2023/08/22/SpringBoot/SpringBoot%E4%B8%AD%E7%9A%84%E5%88%86%E5%B1%82/</url>
+      
+        <content type="html"><![CDATA[<h1 id="最主要的几个分层"><a href="#最主要的几个分层" class="headerlink" title="最主要的几个分层"></a>最主要的几个分层</h1><blockquote><p>对于同一个层来说有不同的称呼只需要知道其作用即可不要纠结用哪个名称</p></blockquote><ul><li>数据库实体层(和数据库对应的)<ul><li>model层</li><li>entity层</li><li>pojo层</li></ul></li><li>数据持久层(访问数据库执行增删查改的)<ul><li>dao层</li><li>mapper层</li></ul></li><li>业务逻辑层(完成基本的功能设计)<ul><li>service层</li></ul></li><li>控制层(请求和响应控制)<ul><li>controller层</li></ul></li></ul><span id="more"></span><h1 id="DTO"><a href="#DTO" class="headerlink" title="DTO"></a>DTO</h1><p>   位于数据库实体层,用来实现<strong>层与层之间的数据</strong>传递</p><hr><blockquote><p>Q:不是有和数据库对应的实体了吗为什么还要DTO?</p></blockquote><blockquote><p>A:DTO更注重数据,在层与层之间所传递的数据可能并不需要传递整个实体的所有字段</p></blockquote><blockquote><p>另一方面DTO和数据库中的实体形成映射关系可以进行解耦</p></blockquote><hr><ul><li>不同的分层可能有不同的称呼,但本质还是描述同一个层</li><li>DTO层用与各层之间的数据传递</li><li>主要的是有以下几个分层<ul><li>数据库实体层-和数据库中的表对应-model</li><li>数据持久层-操作数据库用的-mapper</li><li>业务逻辑层-实现业务逻辑的-service</li><li>控制层-负责处理请求和响应的、写接口的-controller</li></ul></li></ul><h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://www.cnblogs.com/cxy2020/p/12332505.html">Java DTO（data transfer object）的理解 - Code2020 - 博客园 (cnblogs.com)</a></p><p>?descriptionFromFileType=function+toLocaleUpperCase()+{+[native+code]+}+File&amp;mimeType=application/octet-stream&amp;fileName=SpringBoot中的分层.md&amp;fileType=undefined&amp;fileExtension=md</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SpringBoot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机网络分层的必要性</title>
       <link href="/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7/"/>
       <url>/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7/</url>
@@ -24,8 +43,8 @@
     
     <entry>
       <title>软件过程</title>
-      <link href="/2023/07/03/%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B/"/>
-      <url>/2023/07/03/%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B/</url>
+      <link href="/2023/07/03/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B/"/>
+      <url>/2023/07/03/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B/</url>
       
         <content type="html"><![CDATA[<h1 id="软件过程-过程模型"><a href="#软件过程-过程模型" class="headerlink" title="软件过程(过程模型)"></a>软件过程(过程模型)</h1><h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h2><p>为了获取高质量软件所需要完成的一系列任务的框架,规定了完成各项任务的工作步骤</p><blockquote><p>为了能开发出高质量的软件 得按一定的开发流程来,所遵守的一整套流程被称之为软件过程(过程模型)</p></blockquote><ul><li><strong>ISO9000对软件过程的定义</strong></li></ul><p>使用资源将输入转换为输出的活动所构成的系统</p><blockquote><p>给定<strong>输入</strong>比如人员 需求,经过<strong>一系列过程</strong>得到输出即<strong>软件</strong></p><p>这里的一系列过程可以理解为软件过程</p></blockquote><span id="more"></span><h2 id="2-过程模型"><a href="#2-过程模型" class="headerlink" title="2.过程模型"></a>2.过程模型</h2><p>软件过程以软件生命周期为基础,</p><p><strong>但没有一个通用的软件过程</strong>能<strong>适用</strong>于<strong>所有类型的软件的开发</strong></p><p>因此开发不同的软件应根据软件的特点采用不同的软件过程(过程模型)</p><h2 id="3-常见的过程模型"><a href="#3-常见的过程模型" class="headerlink" title="3.常见的过程模型"></a>3.常见的过程模型</h2><p>1.瀑布模型</p><p>2.快速原型模型</p><p>3.增量模型</p><p>4.螺旋模型</p><p>5.喷泉模型</p><p>6.Rational统一过程</p><p>7.敏捷过程与极限编程</p><p>8.微软过程</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>软件过程是将输入(人员、需求)变为输出(满足需求的高质量软件)的过程</li><li>开发不同类型软件需要根据需要使用过程(过程模型) </li><li>软件过程也可以称之为过程模型</li><li>软件生命周期是最基本的过程模型</li><li>在生命周期的基础上进行优化扩充就可以得到不同的过程模型</li></ul>]]></content>
       
@@ -43,8 +62,8 @@
     
     <entry>
       <title>String StringBuffer StringBuilder</title>
-      <link href="/2023/06/29/String-StringBuffer-StringBuilder/"/>
-      <url>/2023/06/29/String-StringBuffer-StringBuilder/</url>
+      <link href="/2023/06/29/Java/String-StringBuffer-StringBuilder/"/>
+      <url>/2023/06/29/Java/String-StringBuffer-StringBuilder/</url>
       
         <content type="html"><![CDATA[<h1 id="String-StringBuffer-StringBuilder"><a href="#String-StringBuffer-StringBuilder" class="headerlink" title="String StringBuffer StringBuilder"></a>String StringBuffer StringBuilder</h1><h2 id="为什么要区分这么多的字符串类"><a href="#为什么要区分这么多的字符串类" class="headerlink" title="为什么要区分这么多的字符串类"></a>为什么要区分这么多的字符串类</h2><blockquote><p>字符串是使用最为频繁的数据类型之一</p><p>有的字符串需要经常修改 、有的的不需要</p><p>有时需要处理大量字符、有时只要处理少量的字符串</p></blockquote><p><strong>根据操作的不同特点 使用不同的的字符串类型</strong></p><h2 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h2><ul><li>都是字符串类</li><li>都是用来处理字符串的</li></ul><h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><h3 id="执行速度"><a href="#执行速度" class="headerlink" title="执行速度"></a>执行速度</h3><p>StringBuilder &gt;StringBuffer&gt;String</p><span id="more"></span><h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p>String -线程安全</p><p>StringBuffer -线程安全</p><p>StringBuilder-线程不安全</p><h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><ul><li><p>大量</p><ul><li>单线程-StringBuilder</li><li>多线程-StringBuffer</li></ul></li><li><p>少量</p><ul><li>String</li></ul></li></ul>]]></content>
       
@@ -62,8 +81,8 @@
     
     <entry>
       <title>接口和抽象类</title>
-      <link href="/2023/06/29/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
-      <url>/2023/06/29/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+      <link href="/2023/06/29/Java/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
+      <url>/2023/06/29/Java/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
       
         <content type="html"><![CDATA[<h1 id="接口和抽象类"><a href="#接口和抽象类" class="headerlink" title="接口和抽象类"></a>接口和抽象类</h1><h2 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h2><ul><li>都能实现多态</li><li>都能增加代码的重用性</li></ul><h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><h3 id="作用方面"><a href="#作用方面" class="headerlink" title="作用方面"></a>作用方面</h3><ul><li><p>接口(只定义方法 不进行实现)</p><ul><li><p>定义了公共方法和常量 没有具体的实现</p><blockquote><p>实现接口的类叫做实现类 必须实现全部方法</p></blockquote></li></ul></li><li><p>抽象类(本质还是一个类 其中写了抽象方法)</p><ul><li><p>可以包含抽象方法和非抽象方法</p><blockquote><p>对应的实现方法可以选择 部分实现或者全部实现</p></blockquote></li></ul></li></ul><span id="more"></span><h3 id="多继承和支持"><a href="#多继承和支持" class="headerlink" title="多继承和支持"></a>多继承和支持</h3><ul><li><p>接口</p><ul><li><p>支持多继承</p><blockquote><p>一个类可以实现多个接口</p></blockquote></li></ul></li><li><p>抽象类</p><ul><li><p>一个类只能实现一个抽象类</p><blockquote><p>因为本质是类 且 类具有单继承的机制</p></blockquote></li></ul></li></ul><!-- more --><h3 id="类型方面"><a href="#类型方面" class="headerlink" title="类型方面"></a>类型方面</h3><ul><li>接口 –&gt; 引用型数据类型</li><li>抽线类–&gt; 类</li></ul>]]></content>
       
