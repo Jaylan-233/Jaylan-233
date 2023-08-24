@@ -94,25 +94,23 @@
 
 
 
-<meta name="description" content="为什么分层​		在网络的实际应用中，需要解决各种不同的问题，因此需要使用不同的层来分别解决这些问题，并确保每个层都能够各司其职，便于管理。此外，还需要将各种问题进行拆分，分配到不同的层中去处理。">
+<meta name="description" content="时延带宽积定义时延(传播时延)和带宽的乘积 时延带宽积&#x3D;传播时延x带宽  当第一个bit到达时 能通过时延带宽积得知当前链路中有多少个bit  参考 【计算机网络】时延带宽积的理解（图解易懂）_GPNU_Log的博客-CSDN博客  往返时间(RTT)概念网络中信息双向交互的时间  开始时间:源主机发送分组时 结束时间:源主机收到目的主机确认分组信息的时间   从目的主机出发再原路返回所需要的时间">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1.5计算机网络分层的必要性">
-<meta property="og:url" content="hhttps://Jaylan-233.github.io/2023/08/21/计算机网络/计算机网络分层的必要性/index.html">
+<meta property="og:title" content="1.3.2计算机网络性能指标(时延带宽积、往返时间、丢包率)">
+<meta property="og:url" content="hhttps://Jaylan-233.github.io/2023/08/24/计算机网络/1.3.2计算机网络性能指标(时延带宽积、往返时间、丢包率)/index.html">
 <meta property="og:site_name" content="Jaylan&#39;s Blog">
-<meta property="og:description" content="为什么分层​		在网络的实际应用中，需要解决各种不同的问题，因此需要使用不同的层来分别解决这些问题，并确保每个层都能够各司其职，便于管理。此外，还需要将各种问题进行拆分，分配到不同的层中去处理。">
+<meta property="og:description" content="时延带宽积定义时延(传播时延)和带宽的乘积 时延带宽积&#x3D;传播时延x带宽  当第一个bit到达时 能通过时延带宽积得知当前链路中有多少个bit  参考 【计算机网络】时延带宽积的理解（图解易懂）_GPNU_Log的博客-CSDN博客  往返时间(RTT)概念网络中信息双向交互的时间  开始时间:源主机发送分组时 结束时间:源主机收到目的主机确认分组信息的时间   从目的主机出发再原路返回所需要的时间">
 <meta property="og:locale">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/319915ce-ba5e-40cc-afe5-6495c2900aff">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/586d342a-aae9-48dd-aba9-21b4fe574fd1">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/5ceff2b7-a7ce-42fb-8c3c-fe6257c6394f">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/d53fe8b0-86e5-4617-98d7-f0f96f42d648">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/104bc4b4-da5a-4f62-8211-324c50bcca55">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/68b6f2bb-47a3-41f0-a3b1-08ac164238c0">
-<meta property="article:published_time" content="2023-08-21T15:30:39.000Z">
-<meta property="article:modified_time" content="2023-08-24T16:06:15.019Z">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/9c13eef3-c266-497b-bf96-067ccdba9f69">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/83c1e093-45c9-4229-9b7e-dfa8f7d298a1">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/74f5e225-dc6e-4509-8aab-87920b6bf7f2">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/2f97b386-96d2-4f95-ad7e-518efe36fee5">
+<meta property="article:published_time" content="2023-08-24T15:30:39.000Z">
+<meta property="article:modified_time" content="2023-08-24T16:05:39.028Z">
 <meta property="article:author" content="Jaylan">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/319915ce-ba5e-40cc-afe5-6495c2900aff">
+<meta name="twitter:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/9c13eef3-c266-497b-bf96-067ccdba9f69">
 
 
 
@@ -141,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="hhttps://Jaylan-233.github.io/2023/08/21/计算机网络/计算机网络分层的必要性/"/>
+  <link rel="canonical" href="hhttps://Jaylan-233.github.io/2023/08/24/计算机网络/1.3.2计算机网络性能指标(时延带宽积、往返时间、丢包率)/"/>
 
 
 
 
 
-  <title>1.5计算机网络分层的必要性 | Jaylan's Blog</title>
+  <title>1.3.2计算机网络性能指标(时延带宽积、往返时间、丢包率) | Jaylan's Blog</title>
   
 
 
@@ -272,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hhttps://Jaylan-233.github.io/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7/">
+    <link itemprop="mainEntityOfPage" href="hhttps://Jaylan-233.github.io/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3.2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87(%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF%E3%80%81%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4%E3%80%81%E4%B8%A2%E5%8C%85%E7%8E%87)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -289,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">1.5计算机网络分层的必要性</h1>
+          <h1 class="post-title" itemprop="name headline">1.3.2计算机网络性能指标(时延带宽积、往返时间、丢包率)</h1>
         
 
         <div class="post-meta">
@@ -301,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-21T23:30:39+08:00">
-                2023-08-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-24T23:30:39+08:00">
+                2023-08-24
               </time>
             
 
@@ -339,85 +337,64 @@
       
 
       
-        <h1 id="为什么分层"><a href="#为什么分层" class="headerlink" title="为什么分层"></a>为什么分层</h1><p>​		在网络的实际应用中，需要解决各种不同的问题，因此需要使用不同的层来分别解决这些问题，并确保每个层都能够各司其职，便于管理。此外，还需要将各种问题进行拆分，分配到不同的层中去处理。</p>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/319915ce-ba5e-40cc-afe5-6495c2900aff" alt="image.png"></p>
+        <h1 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>时延(传播时延)和带宽的乘积</p>
+<p>时延带宽积=传播时延x带宽</p>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/9c13eef3-c266-497b-bf96-067ccdba9f69" alt="image.png"></p>
+<p>当第一个bit到达时 能通过时延带宽积得知当前链路中有多少个bit</p>
+<blockquote>
+<p>参考</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ahLOG/article/details/116202211">【计算机网络】时延带宽积的理解（图解易懂）_GPNU_Log的博客-CSDN博客</a></p>
+</blockquote>
+<h1 id="往返时间-RTT"><a href="#往返时间-RTT" class="headerlink" title="往返时间(RTT)"></a>往返时间(RTT)</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>网络中信息双向交互的时间</p>
+<ul>
+<li>开始时间:源主机发送分组时</li>
+<li>结束时间:源主机收到目的主机确认分组信息的时间</li>
+</ul>
+<blockquote>
+<p>从目的主机出发再原路返回所需要的时间</p>
+</blockquote>
+<hr>
+<p>Q:分组发送过程中在哪里的耗时最多?为什么?</p>
+<p>A:卫星链路,其最长带来的带来的<strong>传播时延最长</strong></p>
+<hr>
 <span id="more"></span>
 
-<h1 id="物理层解决所解决的问题"><a href="#物理层解决所解决的问题" class="headerlink" title="物理层解决所解决的问题"></a>物理层解决所解决的问题</h1><p><strong>解决分组在两主机之间传输的问题</strong></p>
+<h1 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h1><h2 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h2><p>利用率</p>
 <ul>
-<li>用什么物理接口？</li>
-<li>用什么信号来表示bit?</li>
+<li>信道利用率:信道有数据通过的所占百分比</li>
+<li>网络利用率:全网络信道利用率加权平均</li>
 </ul>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/586d342a-aae9-48dd-aba9-21b4fe574fd1" alt="image.png"></p>
-<h1 id="数据链路层所解决的问题"><a href="#数据链路层所解决的问题" class="headerlink" title="数据链路层所解决的问题"></a>数据链路层所解决的问题</h1><p><strong>解决分组在网络中传输的问题</strong></p>
-<ul>
-<li>如何标识各个主机?</li>
-<li>怎么从数据流中区分地址和数据</li>
-<li>争用总线问题如何解决?</li>
-</ul>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/5ceff2b7-a7ce-42fb-8c3c-fe6257c6394f" alt="image.png"></p>
-<h1 id="网络层所解决的问题"><a href="#网络层所解决的问题" class="headerlink" title="网络层所解决的问题"></a>网络层所解决的问题</h1><p><strong>解决分组在网络之间传输的问题</strong></p>
-<ul>
-<li>怎么标识各个网络</li>
-<li>怎么标识网络中的主机</li>
-<li>路由器怎么转发分组</li>
-<li>如何进行路由选择(选什么路径进行转发分组?)</li>
-</ul>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/d53fe8b0-86e5-4617-98d7-f0f96f42d648" alt="image.png"></p>
-<h1 id="运输层所解决的问题"><a href="#运输层所解决的问题" class="headerlink" title="运输层所解决的问题"></a>运输层所解决的问题</h1><ul>
-<li>得到的分组发给哪个应用(运输给谁)</li>
-</ul>
-<blockquote>
-<p>主机收到了发来的分组QQ和浏览器都和网络通信相关的应用进程</p>
-</blockquote>
-<blockquote>
-<p>这个分组是给谁的?</p>
-</blockquote>
-<ul>
-<li>传递分组（运输过程中)出错了怎么办</li>
-</ul>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/104bc4b4-da5a-4f62-8211-324c50bcca55" alt="image.png"></p>
-<h1 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h1><p>制定了各种协议(面向应用的)为不同应用程序指定了各种协议来进行开发</p>
-<blockquote>
-<p>要编写邮件相关的应用就按照SMTP协议</p>
-</blockquote>
-<blockquote>
-<p>要搞文件传输就按照FTP协议</p>
-</blockquote>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/68b6f2bb-47a3-41f0-a3b1-08ac164238c0" alt="image.png"></p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>网络在在使用过程中会产生众多问题 将各种问题进行拆分 交给不同的层进行解决</p>
-<p>不同层各司其职、解决各自需要解决的问题</p>
 <hr>
-<p>Q:这么多问题之间用一个层或者干脆不分层全给他解决了不好吗</p>
-<p>A:全放一块解决 会导致体系结构变得十分复杂、难以理解、难以维护</p>
-<p>和写程序一样过多的功能(网络中问题的解决)写在一块会导致耦合性过高后期难以维护</p>
-<hr>
-<ul>
-<li><strong>物理层</strong><ol>
-<li>用什么样的信号标识bit</li>
-<li>用什么样子的网络接口</li>
-</ol>
-</li>
-<li><strong>数据链路层</strong><ol>
-<li>怎么在<strong>一个网络</strong>中传输报文</li>
-<li>怎么标识网络中的主机</li>
-</ol>
-</li>
-<li><strong>网络层</strong><ol>
-<li>怎么在<strong>各个网络</strong>之间传输报文</li>
-<li>怎么标识各个网络和其中的主机</li>
-</ol>
-</li>
-<li><strong>运输层</strong><ol>
-<li>收到的报文应该给哪个进程(有网络通信相关进程应用)</li>
-<li>报文运输过程中出现错误怎么办</li>
-</ol>
-</li>
-<li><strong>应用层</strong><ol>
-<li>制定了各种协议 为不同的应用</li>
-</ol>
-</li>
+<p><strong>排队理论</strong></p>
+<p>信道利用与增加→时延增加大</p>
+<blockquote>
+<p>利用率不是越大越好</p>
+</blockquote>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/83c1e093-45c9-4229-9b7e-dfa8f7d298a1" alt="image.png"></p>
+<blockquote>
+<p>利用率不能太低(浪费资源)也不能太高(时延大)</p>
+</blockquote>
+<h1 id="丢包率"><a href="#丢包率" class="headerlink" title="丢包率"></a>丢包率</h1><h2 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h2><p>分组丢包:在一定时间范围内(丢失分组数)/分组总数</p>
+<h2 id="分组丢失的两种情况"><a href="#分组丢失的两种情况" class="headerlink" title="分组丢失的两种情况"></a>分组丢失的两种情况</h2><ul>
+<li>传输过程中产生误码–被节点丢弃</li>
+<li>所到达的分组交换机已经满-</li>
 </ul>
+<blockquote>
+<p>不同的</p>
+</blockquote>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/74f5e225-dc6e-4509-8aab-87920b6bf7f2" alt="image.png"></p>
+<h2 id="丢包的分类"><a href="#丢包的分类" class="headerlink" title="丢包的分类"></a>丢包的分类</h2><p>分组在的传输过程中经过很多地方所以可能产生丢包的地方较多</p>
+<ul>
+<li>接口丢包</li>
+<li>节点丢包</li>
+<li>路径丢包</li>
+<li>网络丢包</li>
+</ul>
+<p>运维人员比较关心丢包一般用户感觉不到丢包</p>
+<ul>
+<li>丢包率反映了网络的拥塞状况</li>
+</ul>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/2f97b386-96d2-4f95-ad7e-518efe36fee5" alt="image.png"></p>
 
       
     </div>
@@ -448,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2023/07/03/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B/" rel="next" title="软件过程">
-                <i class="fa fa-chevron-left"></i> 软件过程
+              <a href="/2023/08/23/SpringBoot/%E6%97%A5%E6%9C%9F%E4%BC%A0%E9%80%92%E9%97%AE%E9%A2%98/" rel="next" title="日期传递问题">
+                <i class="fa fa-chevron-left"></i> 日期传递问题
               </a>
             
           </div>
@@ -458,8 +435,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3.1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87(%E9%80%9F%E7%8E%87%E3%80%81%E5%B8%A6%E5%AE%BD%E3%80%81%E5%90%9E%E5%90%90%E9%87%8F%E3%80%81%E6%97%B6%E5%BB%B6)/" rel="prev" title="1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延)">
-                1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延) <i class="fa fa-chevron-right"></i>
+              <a href="/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2%E5%9B%A0%E7%89%B9%E7%BD%91%E6%A6%82%E8%BF%B0/" rel="prev" title="1.2因特网概述">
+                1.2因特网概述 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -585,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%88%86%E5%B1%82"><span class="nav-number">1.</span> <span class="nav-text">为什么分层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E8%A7%A3%E5%86%B3%E6%89%80%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">物理层解决所解决的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E6%89%80%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">数据链路层所解决的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82%E6%89%80%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">网络层所解决的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E8%BE%93%E5%B1%82%E6%89%80%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">运输层所解决的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="nav-number">6.</span> <span class="nav-text">应用层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF"><span class="nav-number">1.</span> <span class="nav-text">时延带宽积</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4-RTT"><span class="nav-number">2.</span> <span class="nav-text">往返时间(RTT)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">概念</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-number">3.</span> <span class="nav-text">利用率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5-1"><span class="nav-number">3.1.</span> <span class="nav-text">概念</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A2%E5%8C%85%E7%8E%87"><span class="nav-number">4.</span> <span class="nav-text">丢包率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5-2"><span class="nav-number">4.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E4%B8%A2%E5%A4%B1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%83%85%E5%86%B5"><span class="nav-number">4.2.</span> <span class="nav-text">分组丢失的两种情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A2%E5%8C%85%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">4.3.</span> <span class="nav-text">丢包的分类</span></a></li></ol></li></ol></div>
             
 
           </div>

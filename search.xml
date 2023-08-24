@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>1.2因特网概述</title>
+      <link href="/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2%E5%9B%A0%E7%89%B9%E7%BD%91%E6%A6%82%E8%BF%B0/"/>
+      <url>/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2%E5%9B%A0%E7%89%B9%E7%BD%91%E6%A6%82%E8%BF%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="网络、互联网、因特网"><a href="#网络、互联网、因特网" class="headerlink" title="网络、互联网、因特网"></a>网络、互联网、因特网</h1><h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><p>   由节点(Node)和链接节点的链路(Link)组成</p><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/fbea496d-b0c0-413d-9251-0a436c0ecab4/7583af1a-1624-4f10-a387-07b853691b1f" alt="image.png"></p><span id="more"></span><h2 id="互联网"><a href="#互联网" class="headerlink" title="互联网"></a>互联网</h2><ul><li>网络的网络,多个网络通过路由器互联起来构成的</li></ul><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/fbea496d-b0c0-413d-9251-0a436c0ecab4/efa2b7e5-ed8b-4b47-b6cf-e6e92f47128d" alt="image.png"></p><h2 id="因特网"><a href="#因特网" class="headerlink" title="因特网"></a>因特网</h2><ul><li>本质是互联网</li><li>世界上最大的互联网</li></ul><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/fbea496d-b0c0-413d-9251-0a436c0ecab4/dc3f4a31-1d40-49b5-abe5-cf9c0cbfe7ea" alt="image.png"></p><blockquote><p>因特网非常庞大所以将其抽象成云 只要连上因特网的设备被称为主机就行</p></blockquote><h1 id="internet和Internet"><a href="#internet和Internet" class="headerlink" title="internet和Internet"></a>internet和Internet</h1><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/fbea496d-b0c0-413d-9251-0a436c0ecab4/7c0714da-5b35-4ba3-aa03-cbec6643b61c" alt="image.png"></p><p><strong>internet</strong></p><blockquote><p>通用名词</p><p>泛指计算机网络互联成的网络</p></blockquote><p><strong>Internet</strong></p><blockquote><p>全球最大的互联网</p><p>使用TCP/IP协议族作为通信规则</p></blockquote><h1 id="计算机网络的三个发展阶段"><a href="#计算机网络的三个发展阶段" class="headerlink" title="计算机网络的三个发展阶段"></a>计算机网络的三个发展阶段</h1><h2 id="三个阶段"><a href="#三个阶段" class="headerlink" title="三个阶段"></a>三个阶段</h2><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/fbea496d-b0c0-413d-9251-0a436c0ecab4/d56856b1-56bc-4e2e-aa4f-7d1db1c8a0f3" alt="image.png"></p><p><strong>大致过程</strong></p><p><strong>单</strong>个网络→三级结构的因特网→多层ISP结构的因特网</p><h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><h3 id="ISP"><a href="#ISP" class="headerlink" title="ISP"></a>ISP</h3><p>   因特网服务提供者(能提供网络服务的公司)</p><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/fbea496d-b0c0-413d-9251-0a436c0ecab4/a3acd8ae-0d44-4dc7-b675-2f2a2cb3ac59" alt="image.png"></p><h3 id="基于ISP的三层结构网络"><a href="#基于ISP的三层结构网络" class="headerlink" title="基于ISP的三层结构网络"></a>基于ISP的三层结构网络</h3><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/fbea496d-b0c0-413d-9251-0a436c0ecab4/145746ee-aaf4-4edc-8159-24f98b6eb3bb" alt="image.png"></p><blockquote><p>普通用户接入到因特网也可以成为ISP,只要使用路由器让其他用户与其相连就行</p></blockquote><h1 id="因特网的标准化工作"><a href="#因特网的标准化工作" class="headerlink" title="因特网的标准化工作"></a>因特网的标准化工作</h1><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/fbea496d-b0c0-413d-9251-0a436c0ecab4/89aab44e-23ec-422a-ba7a-5d391fb887d0" alt="image.png"></p><p>因特网协会ISOC 负责管理因特网</p><p><strong>特点</strong></p><ul><li>指定标准面向公众</li></ul><h1 id="因特网的组成"><a href="#因特网的组成" class="headerlink" title="因特网的组成"></a>因特网的组成</h1><ul><li>核心部分</li></ul><blockquote><p>主要由路由器和网络组成 主要负责是分组转发(路由器的职能)</p></blockquote><ul><li>边缘部分</li></ul><blockquote><p>连接在因特网上的各种主机</p></blockquote><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/fbea496d-b0c0-413d-9251-0a436c0ecab4/0848f62d-4b19-413f-9de6-0497f5a43836" alt="image.png"></p><blockquote><p>路由器是专用计算机 但能称之为主机</p></blockquote><h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>结点+链路→网络</p><p>网络+网络→互联网</p><p>世界上最大的互联网→因特网</p><hr><p>internet和Internet</p><p>前者泛指由网络构成的互联网</p><p>后者使用TCP/IP协议族作为通信规则的互联网</p><hr><p>单个网络→三级结构互联网→多层次ISP因特网</p><p>因特网诞生时间=TCP/IP协议族成为标准=1983年、</p><hr><p>ISP:网络服务提供商(联通、移动、电信)</p><p>个人用户需要向ISP缴纳费用才能使用因特网</p><hr><p>因特网=核心部分(分组交换)+边缘部分(主机设备)</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1.3.2计算机网络性能指标(时延带宽积、往返时间、丢包率)</title>
+      <link href="/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3.2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87(%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF%E3%80%81%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4%E3%80%81%E4%B8%A2%E5%8C%85%E7%8E%87)/"/>
+      <url>/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3.2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87(%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF%E3%80%81%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4%E3%80%81%E4%B8%A2%E5%8C%85%E7%8E%87)/</url>
+      
+        <content type="html"><![CDATA[<h1 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>时延(传播时延)和带宽的乘积</p><p>时延带宽积=传播时延x带宽</p><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/9c13eef3-c266-497b-bf96-067ccdba9f69" alt="image.png"></p><p>当第一个bit到达时 能通过时延带宽积得知当前链路中有多少个bit</p><blockquote><p>参考</p><p><a href="https://blog.csdn.net/ahLOG/article/details/116202211">【计算机网络】时延带宽积的理解（图解易懂）_GPNU_Log的博客-CSDN博客</a></p></blockquote><h1 id="往返时间-RTT"><a href="#往返时间-RTT" class="headerlink" title="往返时间(RTT)"></a>往返时间(RTT)</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>网络中信息双向交互的时间</p><ul><li>开始时间:源主机发送分组时</li><li>结束时间:源主机收到目的主机确认分组信息的时间</li></ul><blockquote><p>从目的主机出发再原路返回所需要的时间</p></blockquote><hr><p>Q:分组发送过程中在哪里的耗时最多?为什么?</p><p>A:卫星链路,其最长带来的带来的<strong>传播时延最长</strong></p><hr><span id="more"></span><h1 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h1><h2 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h2><p>利用率</p><ul><li>信道利用率:信道有数据通过的所占百分比</li><li>网络利用率:全网络信道利用率加权平均</li></ul><hr><p><strong>排队理论</strong></p><p>信道利用与增加→时延增加大</p><blockquote><p>利用率不是越大越好</p></blockquote><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/83c1e093-45c9-4229-9b7e-dfa8f7d298a1" alt="image.png"></p><blockquote><p>利用率不能太低(浪费资源)也不能太高(时延大)</p></blockquote><h1 id="丢包率"><a href="#丢包率" class="headerlink" title="丢包率"></a>丢包率</h1><h2 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h2><p>分组丢包:在一定时间范围内(丢失分组数)/分组总数</p><h2 id="分组丢失的两种情况"><a href="#分组丢失的两种情况" class="headerlink" title="分组丢失的两种情况"></a>分组丢失的两种情况</h2><ul><li>传输过程中产生误码–被节点丢弃</li><li>所到达的分组交换机已经满-</li></ul><blockquote><p>不同的</p></blockquote><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/74f5e225-dc6e-4509-8aab-87920b6bf7f2" alt="image.png"></p><h2 id="丢包的分类"><a href="#丢包的分类" class="headerlink" title="丢包的分类"></a>丢包的分类</h2><p>分组在的传输过程中经过很多地方所以可能产生丢包的地方较多</p><ul><li>接口丢包</li><li>节点丢包</li><li>路径丢包</li><li>网络丢包</li></ul><p>运维人员比较关心丢包一般用户感觉不到丢包</p><ul><li>丢包率反映了网络的拥塞状况</li></ul><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0ab7a122-52a5-45fb-bcfb-b0b68e93e0c7/2f97b386-96d2-4f95-ad7e-518efe36fee5" alt="image.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>日期传递问题</title>
       <link href="/2023/08/23/SpringBoot/%E6%97%A5%E6%9C%9F%E4%BC%A0%E9%80%92%E9%97%AE%E9%A2%98/"/>
       <url>/2023/08/23/SpringBoot/%E6%97%A5%E6%9C%9F%E4%BC%A0%E9%80%92%E9%97%AE%E9%A2%98/</url>
@@ -42,7 +80,26 @@
     
     
     <entry>
-      <title>计算机网络分层的必要性</title>
+      <title>1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延)</title>
+      <link href="/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3.1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87(%E9%80%9F%E7%8E%87%E3%80%81%E5%B8%A6%E5%AE%BD%E3%80%81%E5%90%9E%E5%90%90%E9%87%8F%E3%80%81%E6%97%B6%E5%BB%B6)/"/>
+      <url>/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3.1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87(%E9%80%9F%E7%8E%87%E3%80%81%E5%B8%A6%E5%AE%BD%E3%80%81%E5%90%9E%E5%90%90%E9%87%8F%E3%80%81%E6%97%B6%E5%BB%B6)/</url>
+      
+        <content type="html"><![CDATA[<h1 id="比特-bit"><a href="#比特-bit" class="headerlink" title="比特(bit)"></a>比特(bit)</h1><ul><li>计算机<strong>数据量的单位</strong></li><li>一个bit就是一个二进制数中的一个0或者1</li></ul><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/55a259fc-90a4-4d89-99e3-2a65db3f84d1" alt="image.png"></p><p><strong>K M G T 各级相差2^10(标识存储10)</strong></p><blockquote><p>操作系统中的G和硬盘厂家的G</p><p>操作系统中的G=2^30</p><p>硬盘厂家的G=10^9</p></blockquote><h1 id="速率-比特率、数据率"><a href="#速率-比特率、数据率" class="headerlink" title="速率(比特率、数据率)"></a>速率(比特率、数据率)</h1><ul><li>网络中的主机属性信号上传递bit的速率</li></ul><blockquote><p>网络中传递bit的速度</p></blockquote><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/6b950f80-1118-4a73-b2fb-b6d34618cf85" alt="image.png"></p><ul><li>K是使用的是小写</li><li>各级之间相差10^3和标识存储时的不同(2^10)</li><li>我们一般所认知的计量大小一致(M→ 兆)</li></ul><span id="more"></span><h2 id="存储单位和速率单位的对比"><a href="#存储单位和速率单位的对比" class="headerlink" title="存储单位和速率单位的对比"></a>存储单位和速率单位的对比</h2><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/20c11e32-2162-4170-a4a7-168c0d550064" alt="image.png"></p><ul><li>进制不同<ul><li>存储时 除Byte外 其他进制都为2^10</li><li>表示速率时 进制则为10^3</li></ul></li><li>表示速率时使用k而不是k作为单位</li></ul><hr><ul><li>计算时的单位问题</li></ul><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/83c8f9c5-8cd4-4536-97b7-886830f38fda" alt="image.png"></p><blockquote><p>由于表示存储和速率时的单位除了K和k不同之外 其余所使用的符号的都一样</p></blockquote><hr><blockquote><p>Q:既然符号都一样那是不是可以越掉?</p><p>A:严格意义上不同 因为二者所表示的的大小不同 不过对精度要求不高时可以越掉</p></blockquote><hr><h1 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h1><ul><li>通信线路能传递速率的能力</li><li>单位时间内从网络中某点到另一点能通过<strong>最高数据率(速率)</strong></li></ul><blockquote><p>网络中速率的峰值</p></blockquote><ul><li>单位和速率的相同</li></ul><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/cc4ff758-ab1c-48ef-ae0e-9248b8819358" alt="image.png"></p><h1 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h1><ul><li>单位时间内 能通过某个网络的数据量</li><li>实际能有多少数据能通过(理论和实际往往不相符)</li><li>收到<strong>带宽、额定速率</strong>限制</li><li><strong>实际的带宽</strong></li></ul><blockquote><p><strong>因为收其他因素的的制约达不到理论的带宽→实际的带宽→吞吐量</strong></p></blockquote><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/2175ddad-1c50-4133-a238-6ce2c1c53be2" alt="image.png"></p><h1 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h1><ul><li>在网络中数据从一个点到另外一个点的延时</li></ul><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/a529ec7e-34e5-4e3f-b259-36ba1e7a8db0" alt="image.png"></p><ul><li>时延三个组成部分<ul><li>发送时延:主机发到网络中</li><li>传播时延:在网络中传播</li><li>处理时延:路由器分组转发(动态的 不方便计算)</li></ul></li></ul><blockquote><p>这里的处理时延包括的<strong>排队时延</strong></p></blockquote><hr><ul><li><strong>时延中谁是主导</strong></li></ul><blockquote><p>首先排除处理时延,因为是动态不好计算</p><p>不同的情况下主导方可能不同,所以需要具体问题具体分析</p></blockquote><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/0b355b58-61c4-4718-b693-e210797afe70" alt="image.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1.5计算机网络分层的必要性</title>
       <link href="/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7/"/>
       <url>/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7/</url>
       

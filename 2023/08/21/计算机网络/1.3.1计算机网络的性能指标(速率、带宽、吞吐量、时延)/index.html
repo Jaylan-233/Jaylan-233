@@ -94,25 +94,27 @@
 
 
 
-<meta name="description" content="为什么分层​		在网络的实际应用中，需要解决各种不同的问题，因此需要使用不同的层来分别解决这些问题，并确保每个层都能够各司其职，便于管理。此外，还需要将各种问题进行拆分，分配到不同的层中去处理。">
+<meta name="description" content="比特(bit) 计算机数据量的单位 一个bit就是一个二进制数中的一个0或者1   K M G T 各级相差2^10(标识存储10)  操作系统中的G和硬盘厂家的G 操作系统中的G&#x3D;2^30 硬盘厂家的G&#x3D;10^9  速率(比特率、数据率) 网络中的主机属性信号上传递bit的速率   网络中传递bit的速度    K是使用的是小写 各级之间相差10^3和标识存储时的不同(2^10) 我们一般所认知">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1.5计算机网络分层的必要性">
-<meta property="og:url" content="hhttps://Jaylan-233.github.io/2023/08/21/计算机网络/计算机网络分层的必要性/index.html">
+<meta property="og:title" content="1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延)">
+<meta property="og:url" content="hhttps://Jaylan-233.github.io/2023/08/21/计算机网络/1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延)/index.html">
 <meta property="og:site_name" content="Jaylan&#39;s Blog">
-<meta property="og:description" content="为什么分层​		在网络的实际应用中，需要解决各种不同的问题，因此需要使用不同的层来分别解决这些问题，并确保每个层都能够各司其职，便于管理。此外，还需要将各种问题进行拆分，分配到不同的层中去处理。">
+<meta property="og:description" content="比特(bit) 计算机数据量的单位 一个bit就是一个二进制数中的一个0或者1   K M G T 各级相差2^10(标识存储10)  操作系统中的G和硬盘厂家的G 操作系统中的G&#x3D;2^30 硬盘厂家的G&#x3D;10^9  速率(比特率、数据率) 网络中的主机属性信号上传递bit的速率   网络中传递bit的速度    K是使用的是小写 各级之间相差10^3和标识存储时的不同(2^10) 我们一般所认知">
 <meta property="og:locale">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/319915ce-ba5e-40cc-afe5-6495c2900aff">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/586d342a-aae9-48dd-aba9-21b4fe574fd1">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/5ceff2b7-a7ce-42fb-8c3c-fe6257c6394f">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/d53fe8b0-86e5-4617-98d7-f0f96f42d648">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/104bc4b4-da5a-4f62-8211-324c50bcca55">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/68b6f2bb-47a3-41f0-a3b1-08ac164238c0">
-<meta property="article:published_time" content="2023-08-21T15:30:39.000Z">
-<meta property="article:modified_time" content="2023-08-24T16:06:15.019Z">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/55a259fc-90a4-4d89-99e3-2a65db3f84d1">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/6b950f80-1118-4a73-b2fb-b6d34618cf85">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/20c11e32-2162-4170-a4a7-168c0d550064">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/83c8f9c5-8cd4-4536-97b7-886830f38fda">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/cc4ff758-ab1c-48ef-ae0e-9248b8819358">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/2175ddad-1c50-4133-a238-6ce2c1c53be2">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/a529ec7e-34e5-4e3f-b259-36ba1e7a8db0">
+<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/0b355b58-61c4-4718-b693-e210797afe70">
+<meta property="article:published_time" content="2023-08-21T15:50:39.000Z">
+<meta property="article:modified_time" content="2023-08-24T16:04:23.852Z">
 <meta property="article:author" content="Jaylan">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/319915ce-ba5e-40cc-afe5-6495c2900aff">
+<meta name="twitter:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/55a259fc-90a4-4d89-99e3-2a65db3f84d1">
 
 
 
@@ -141,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="hhttps://Jaylan-233.github.io/2023/08/21/计算机网络/计算机网络分层的必要性/"/>
+  <link rel="canonical" href="hhttps://Jaylan-233.github.io/2023/08/21/计算机网络/1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延)/"/>
 
 
 
 
 
-  <title>1.5计算机网络分层的必要性 | Jaylan's Blog</title>
+  <title>1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延) | Jaylan's Blog</title>
   
 
 
@@ -272,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hhttps://Jaylan-233.github.io/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7/">
+    <link itemprop="mainEntityOfPage" href="hhttps://Jaylan-233.github.io/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3.1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87(%E9%80%9F%E7%8E%87%E3%80%81%E5%B8%A6%E5%AE%BD%E3%80%81%E5%90%9E%E5%90%90%E9%87%8F%E3%80%81%E6%97%B6%E5%BB%B6)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -289,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">1.5计算机网络分层的必要性</h1>
+          <h1 class="post-title" itemprop="name headline">1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延)</h1>
         
 
         <div class="post-meta">
@@ -301,7 +303,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-21T23:30:39+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-21T23:50:39+08:00">
                 2023-08-21
               </time>
             
@@ -339,85 +341,99 @@
       
 
       
-        <h1 id="为什么分层"><a href="#为什么分层" class="headerlink" title="为什么分层"></a>为什么分层</h1><p>​		在网络的实际应用中，需要解决各种不同的问题，因此需要使用不同的层来分别解决这些问题，并确保每个层都能够各司其职，便于管理。此外，还需要将各种问题进行拆分，分配到不同的层中去处理。</p>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/319915ce-ba5e-40cc-afe5-6495c2900aff" alt="image.png"></p>
+        <h1 id="比特-bit"><a href="#比特-bit" class="headerlink" title="比特(bit)"></a>比特(bit)</h1><ul>
+<li>计算机<strong>数据量的单位</strong></li>
+<li>一个bit就是一个二进制数中的一个0或者1</li>
+</ul>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/55a259fc-90a4-4d89-99e3-2a65db3f84d1" alt="image.png"></p>
+<p><strong>K M G T 各级相差2^10(标识存储10)</strong></p>
+<blockquote>
+<p>操作系统中的G和硬盘厂家的G</p>
+<p>操作系统中的G=2^30</p>
+<p>硬盘厂家的G=10^9</p>
+</blockquote>
+<h1 id="速率-比特率、数据率"><a href="#速率-比特率、数据率" class="headerlink" title="速率(比特率、数据率)"></a>速率(比特率、数据率)</h1><ul>
+<li>网络中的主机属性信号上传递bit的速率</li>
+</ul>
+<blockquote>
+<p>网络中传递bit的速度</p>
+</blockquote>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/6b950f80-1118-4a73-b2fb-b6d34618cf85" alt="image.png"></p>
+<ul>
+<li>K是使用的是小写</li>
+<li>各级之间相差10^3和标识存储时的不同(2^10)</li>
+<li>我们一般所认知的计量大小一致(M→ 兆)</li>
+</ul>
 <span id="more"></span>
 
-<h1 id="物理层解决所解决的问题"><a href="#物理层解决所解决的问题" class="headerlink" title="物理层解决所解决的问题"></a>物理层解决所解决的问题</h1><p><strong>解决分组在两主机之间传输的问题</strong></p>
+<h2 id="存储单位和速率单位的对比"><a href="#存储单位和速率单位的对比" class="headerlink" title="存储单位和速率单位的对比"></a>存储单位和速率单位的对比</h2><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/20c11e32-2162-4170-a4a7-168c0d550064" alt="image.png"></p>
 <ul>
-<li>用什么物理接口？</li>
-<li>用什么信号来表示bit?</li>
+<li>进制不同<ul>
+<li>存储时 除Byte外 其他进制都为2^10</li>
+<li>表示速率时 进制则为10^3</li>
 </ul>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/586d342a-aae9-48dd-aba9-21b4fe574fd1" alt="image.png"></p>
-<h1 id="数据链路层所解决的问题"><a href="#数据链路层所解决的问题" class="headerlink" title="数据链路层所解决的问题"></a>数据链路层所解决的问题</h1><p><strong>解决分组在网络中传输的问题</strong></p>
-<ul>
-<li>如何标识各个主机?</li>
-<li>怎么从数据流中区分地址和数据</li>
-<li>争用总线问题如何解决?</li>
+</li>
+<li>表示速率时使用k而不是k作为单位</li>
 </ul>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/5ceff2b7-a7ce-42fb-8c3c-fe6257c6394f" alt="image.png"></p>
-<h1 id="网络层所解决的问题"><a href="#网络层所解决的问题" class="headerlink" title="网络层所解决的问题"></a>网络层所解决的问题</h1><p><strong>解决分组在网络之间传输的问题</strong></p>
-<ul>
-<li>怎么标识各个网络</li>
-<li>怎么标识网络中的主机</li>
-<li>路由器怎么转发分组</li>
-<li>如何进行路由选择(选什么路径进行转发分组?)</li>
-</ul>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/d53fe8b0-86e5-4617-98d7-f0f96f42d648" alt="image.png"></p>
-<h1 id="运输层所解决的问题"><a href="#运输层所解决的问题" class="headerlink" title="运输层所解决的问题"></a>运输层所解决的问题</h1><ul>
-<li>得到的分组发给哪个应用(运输给谁)</li>
-</ul>
-<blockquote>
-<p>主机收到了发来的分组QQ和浏览器都和网络通信相关的应用进程</p>
-</blockquote>
-<blockquote>
-<p>这个分组是给谁的?</p>
-</blockquote>
-<ul>
-<li>传递分组（运输过程中)出错了怎么办</li>
-</ul>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/104bc4b4-da5a-4f62-8211-324c50bcca55" alt="image.png"></p>
-<h1 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h1><p>制定了各种协议(面向应用的)为不同应用程序指定了各种协议来进行开发</p>
-<blockquote>
-<p>要编写邮件相关的应用就按照SMTP协议</p>
-</blockquote>
-<blockquote>
-<p>要搞文件传输就按照FTP协议</p>
-</blockquote>
-<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/0add4ff3-c98c-4b40-9073-d162fa63fb5b/68b6f2bb-47a3-41f0-a3b1-08ac164238c0" alt="image.png"></p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>网络在在使用过程中会产生众多问题 将各种问题进行拆分 交给不同的层进行解决</p>
-<p>不同层各司其职、解决各自需要解决的问题</p>
-<hr>
-<p>Q:这么多问题之间用一个层或者干脆不分层全给他解决了不好吗</p>
-<p>A:全放一块解决 会导致体系结构变得十分复杂、难以理解、难以维护</p>
-<p>和写程序一样过多的功能(网络中问题的解决)写在一块会导致耦合性过高后期难以维护</p>
 <hr>
 <ul>
-<li><strong>物理层</strong><ol>
-<li>用什么样的信号标识bit</li>
-<li>用什么样子的网络接口</li>
-</ol>
-</li>
-<li><strong>数据链路层</strong><ol>
-<li>怎么在<strong>一个网络</strong>中传输报文</li>
-<li>怎么标识网络中的主机</li>
-</ol>
-</li>
-<li><strong>网络层</strong><ol>
-<li>怎么在<strong>各个网络</strong>之间传输报文</li>
-<li>怎么标识各个网络和其中的主机</li>
-</ol>
-</li>
-<li><strong>运输层</strong><ol>
-<li>收到的报文应该给哪个进程(有网络通信相关进程应用)</li>
-<li>报文运输过程中出现错误怎么办</li>
-</ol>
-</li>
-<li><strong>应用层</strong><ol>
-<li>制定了各种协议 为不同的应用</li>
-</ol>
+<li>计算时的单位问题</li>
+</ul>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/83c8f9c5-8cd4-4536-97b7-886830f38fda" alt="image.png"></p>
+<blockquote>
+<p>由于表示存储和速率时的单位除了K和k不同之外 其余所使用的符号的都一样</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>Q:既然符号都一样那是不是可以越掉?</p>
+<p>A:严格意义上不同 因为二者所表示的的大小不同 不过对精度要求不高时可以越掉</p>
+</blockquote>
+<hr>
+<h1 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h1><ul>
+<li>通信线路能传递速率的能力</li>
+<li>单位时间内从网络中某点到另一点能通过<strong>最高数据率(速率)</strong></li>
+</ul>
+<blockquote>
+<p>网络中速率的峰值</p>
+</blockquote>
+<ul>
+<li>单位和速率的相同</li>
+</ul>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/cc4ff758-ab1c-48ef-ae0e-9248b8819358" alt="image.png"></p>
+<h1 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h1><ul>
+<li>单位时间内 能通过某个网络的数据量</li>
+<li>实际能有多少数据能通过(理论和实际往往不相符)</li>
+<li>收到<strong>带宽、额定速率</strong>限制</li>
+<li><strong>实际的带宽</strong></li>
+</ul>
+<blockquote>
+<p><strong>因为收其他因素的的制约达不到理论的带宽→实际的带宽→吞吐量</strong></p>
+</blockquote>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/2175ddad-1c50-4133-a238-6ce2c1c53be2" alt="image.png"></p>
+<h1 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h1><ul>
+<li>在网络中数据从一个点到另外一个点的延时</li>
+</ul>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/a529ec7e-34e5-4e3f-b259-36ba1e7a8db0" alt="image.png"></p>
+<ul>
+<li>时延三个组成部分<ul>
+<li>发送时延:主机发到网络中</li>
+<li>传播时延:在网络中传播</li>
+<li>处理时延:路由器分组转发(动态的 不方便计算)</li>
+</ul>
 </li>
 </ul>
+<blockquote>
+<p>这里的处理时延包括的<strong>排队时延</strong></p>
+</blockquote>
+<hr>
+<ul>
+<li><strong>时延中谁是主导</strong></li>
+</ul>
+<blockquote>
+<p>首先排除处理时延,因为是动态不好计算</p>
+<p>不同的情况下主导方可能不同,所以需要具体问题具体分析</p>
+</blockquote>
+<p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/f620d9cd-7569-434a-8cea-f8ebf7d77d1a/0b355b58-61c4-4718-b693-e210797afe70" alt="image.png"></p>
 
       
     </div>
@@ -448,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2023/07/03/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B/" rel="next" title="软件过程">
-                <i class="fa fa-chevron-left"></i> 软件过程
+              <a href="/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E5%B1%82%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7/" rel="next" title="1.5计算机网络分层的必要性">
+                <i class="fa fa-chevron-left"></i> 1.5计算机网络分层的必要性
               </a>
             
           </div>
@@ -458,8 +474,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2023/08/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3.1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87(%E9%80%9F%E7%8E%87%E3%80%81%E5%B8%A6%E5%AE%BD%E3%80%81%E5%90%9E%E5%90%90%E9%87%8F%E3%80%81%E6%97%B6%E5%BB%B6)/" rel="prev" title="1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延)">
-                1.3.1计算机网络的性能指标(速率、带宽、吞吐量、时延) <i class="fa fa-chevron-right"></i>
+              <a href="/2023/08/22/SpringBoot/SpringBoot%E4%B8%AD%E7%9A%84%E5%88%86%E5%B1%82/" rel="prev" title="SpringBoot中的分层">
+                SpringBoot中的分层 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -585,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%88%86%E5%B1%82"><span class="nav-number">1.</span> <span class="nav-text">为什么分层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E8%A7%A3%E5%86%B3%E6%89%80%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">物理层解决所解决的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E6%89%80%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">数据链路层所解决的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82%E6%89%80%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">网络层所解决的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E8%BE%93%E5%B1%82%E6%89%80%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">运输层所解决的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="nav-number">6.</span> <span class="nav-text">应用层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AF%94%E7%89%B9-bit"><span class="nav-number">1.</span> <span class="nav-text">比特(bit)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%9F%E7%8E%87-%E6%AF%94%E7%89%B9%E7%8E%87%E3%80%81%E6%95%B0%E6%8D%AE%E7%8E%87"><span class="nav-number">2.</span> <span class="nav-text">速率(比特率、数据率)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%8D%95%E4%BD%8D%E5%92%8C%E9%80%9F%E7%8E%87%E5%8D%95%E4%BD%8D%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">2.1.</span> <span class="nav-text">存储单位和速率单位的对比</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%A6%E5%AE%BD"><span class="nav-number">3.</span> <span class="nav-text">带宽</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%9E%E5%90%90%E9%87%8F"><span class="nav-number">4.</span> <span class="nav-text">吞吐量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E5%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">时延</span></a></li></ol></div>
             
 
           </div>
