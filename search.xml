@@ -8,7 +8,7 @@
       <link href="/2023/09/04/JavaWeb/1-5-JDBC-URL/"/>
       <url>/2023/09/04/JavaWeb/1-5-JDBC-URL/</url>
       
-        <content type="html"><![CDATA[<h1 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h1><ul><li>表示数据库的用的</li></ul><blockquote><p>网站由网址作为表示 对于数据库而言也由对应的URL作为标识</p></blockquote><h2 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h2><p><img src="/1-5-JDBC-URL.assets/image-20230904220531933.png" alt="image-20230904220531933"></p><span id="more"></span><h1 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h1><p><a href="https://dev.mysql.com/doc/connector-j/8.1/en/connector-j-reference-jdbc-url-format.html">https://dev.mysql.com/doc/connector-j/8.1/en/connector-j-reference-jdbc-url-format.html</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h1><ul><li>表示数据库的用的</li></ul><blockquote><p>网站由网址作为表示 对于数据库而言也由对应的URL作为标识</p></blockquote><h2 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h2><img src="1-5-JDBC-URL.assets/image-20230904220531933.png" alt="image-20230904220531933"><span id="more"></span><h1 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h1><p><a href="https://dev.mysql.com/doc/connector-j/8.1/en/connector-j-reference-jdbc-url-format.html">https://dev.mysql.com/doc/connector-j/8.1/en/connector-j-reference-jdbc-url-format.html</a></p>]]></content>
       
       
       
