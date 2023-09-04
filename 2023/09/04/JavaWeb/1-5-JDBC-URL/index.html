@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="SpringBoot," />
+  <meta name="keywords" content="JavaWeb," />
 
 
 
@@ -94,20 +94,20 @@
 
 
 
-<meta name="description" content="问题描述前端发来的日期格式和后端不匹配  后端成员变量的时间属性是Date类型  默认的格式长这样Jan 01 00:00:00 CST 2021  前端发来的日记是字符串类型  格式是yyyy-MM-dd 解决办法解析并转换前端和日期格式 将前端发来的字符串类型的日期进行解析 转换成Date类型再进行赋值">
+<meta name="description" content="作用 表示数据库的用的   网站由网址作为表示 对于数据库而言也由对应的URL作为标识  基本格式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="日期传递问题">
-<meta property="og:url" content="hhttps://Jaylan-233.github.io/2023/08/23/SpringBoot/日期传递问题/index.html">
+<meta property="og:title" content="1.5 JDBC URL">
+<meta property="og:url" content="hhttps://Jaylan-233.github.io/2023/09/04/JavaWeb/1-5-JDBC-URL/index.html">
 <meta property="og:site_name" content="Jaylan&#39;s Blog">
-<meta property="og:description" content="问题描述前端发来的日期格式和后端不匹配  后端成员变量的时间属性是Date类型  默认的格式长这样Jan 01 00:00:00 CST 2021  前端发来的日记是字符串类型  格式是yyyy-MM-dd 解决办法解析并转换前端和日期格式 将前端发来的字符串类型的日期进行解析 转换成Date类型再进行赋值">
+<meta property="og:description" content="作用 表示数据库的用的   网站由网址作为表示 对于数据库而言也由对应的URL作为标识  基本格式">
 <meta property="og:locale">
-<meta property="og:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/8ea49bd2-48b8-4557-8882-2e6d27ec1c56/d97f0729-09ff-46c7-a75b-df7cc55d9e52">
-<meta property="article:published_time" content="2023-08-23T14:43:39.000Z">
-<meta property="article:modified_time" content="2023-08-23T16:20:18.227Z">
+<meta property="og:image" content="hhttps://Jaylan-233.github.io/1-5-JDBC-URL.assets/image-20230904220531933.png">
+<meta property="article:published_time" content="2023-09-04T13:23:50.000Z">
+<meta property="article:modified_time" content="2023-09-04T14:06:41.790Z">
 <meta property="article:author" content="Jaylan">
-<meta property="article:tag" content="SpringBoot">
+<meta property="article:tag" content="JavaWeb">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/8ea49bd2-48b8-4557-8882-2e6d27ec1c56/d97f0729-09ff-46c7-a75b-df7cc55d9e52">
+<meta name="twitter:image" content="hhttps://Jaylan-233.github.io/1-5-JDBC-URL.assets/image-20230904220531933.png">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="hhttps://Jaylan-233.github.io/2023/08/23/SpringBoot/日期传递问题/"/>
+  <link rel="canonical" href="hhttps://Jaylan-233.github.io/2023/09/04/JavaWeb/1-5-JDBC-URL/"/>
 
 
 
 
 
-  <title>日期传递问题 | Jaylan's Blog</title>
+  <title>1.5 JDBC URL | Jaylan's Blog</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="hhttps://Jaylan-233.github.io/2023/08/23/SpringBoot/%E6%97%A5%E6%9C%9F%E4%BC%A0%E9%80%92%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="hhttps://Jaylan-233.github.io/2023/09/04/JavaWeb/1-5-JDBC-URL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">日期传递问题</h1>
+          <h1 class="post-title" itemprop="name headline">1.5 JDBC URL</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-23T22:43:39+08:00">
-                2023-08-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-09-04T21:23:50+08:00">
+                2023-09-04
               </time>
             
 
@@ -334,52 +334,18 @@
       
 
       
-        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>前端发来的日期格式和后端不匹配</p>
-<ul>
-<li>后端成员变量的时间属性是<strong>Date类型</strong></li>
+        <h1 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h1><ul>
+<li>表示数据库的用的</li>
 </ul>
-<p>默认的格式长这样<code>Jan 01 00:00:00 CST 2021</code></p>
-<ul>
-<li>前端发来的日记是<strong>字符串类型</strong></li>
-</ul>
-<p>格式是yyyy-MM-dd</p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><h2 id="解析并转换前端和日期格式"><a href="#解析并转换前端和日期格式" class="headerlink" title="解析并转换前端和日期格式"></a>解析并转换前端和日期格式</h2><ul>
-<li>将前端发来的字符串类型的日期进行解析</li>
-<li>转换成Date类型再进行赋值</li>
-</ul>
+<blockquote>
+<p>网站由网址作为表示 对于数据库而言也由对应的URL作为标识</p>
+</blockquote>
+<h2 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h2><p><img src="/1-5-JDBC-URL.assets/image-20230904220531933.png" alt="image-20230904220531933"></p>
 <span id="more"></span>
 
-<h1 id="使用注解"><a href="#使用注解" class="headerlink" title="使用注解"></a>使用注解</h1><h2 id="DateTimeFormat"><a href="#DateTimeFormat" class="headerlink" title="@DateTimeFormat"></a>@DateTimeFormat</h2><ul>
-<li><p>功能</p>
-<p> 解析前端发来的日期格式</p>
-</li>
-<li><p>用法</p>
-<p> @DateTimeFormat(pattern = “解析的日期格式”)</p>
-</li>
-<li><p>注意点</p>
-</li>
-</ul>
-<p>该注解只具有解析的作用并不具有格式转换的功能</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="title class_">DateTimeFormat</span>(pattern = <span class="string">"yyyy-MM-dd"</span>)</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="JsonFormat"><a href="#JsonFormat" class="headerlink" title="@JsonFormat"></a>@JsonFormat</h2><ul>
-<li><p>功能</p>
-<p> 约束响应格式</p>
-</li>
-<li><p>用法</p>
-</li>
-</ul>
-<p>@JsonFormat(pattern = (“响应的日期格式类型”）</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="title class_">JsonFormat</span>(pattern = <span class="string">"yyyy-MM-dd"</span>)</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><img src="https://res.craft.do/user/full/1cf7cef4-ee3a-97e3-deb8-de111119df84/doc/8ea49bd2-48b8-4557-8882-2e6d27ec1c56/d97f0729-09ff-46c7-a75b-df7cc55d9e52" alt="image.png"></p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><ul>
-<li>对于前后端日期时间一致问题可以使用@JsonFormat和@DateTimeFormat进行解决</li>
-<li>@DateTimeFormat用来解析前端发来的日期格式</li>
-<li>@JsonFormat用来约束后端响应的格式</li>
-<li>@DateTimeFormat只能解析指定日期各格式并不具备日期格式转换功能</li>
-</ul>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhuzicc/article/details/106529485">@JsonFormat 和 @DateTimeFormat 时间格式化注解详解（不看血亏）_jsonformat注解_zhuzicc的博客-CSDN博客</a></p>
+<h1 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h1><p><a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/connector-j/8.1/en/connector-j-reference-jdbc-url-format.html">https://dev.mysql.com/doc/connector-j/8.1/en/connector-j-reference-jdbc-url-format.html</a></p>
 
       
     </div>
@@ -397,7 +363,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/SpringBoot/" rel="tag"># SpringBoot</a>
+            <a href="/tags/JavaWeb/" rel="tag"># JavaWeb</a>
           
         </div>
       
@@ -410,8 +376,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2023/08/22/SpringBoot/SpringBoot%E4%B8%AD%E7%9A%84%E5%88%86%E5%B1%82/" rel="next" title="SpringBoot中的分层">
-                <i class="fa fa-chevron-left"></i> SpringBoot中的分层
+              <a href="/2023/09/04/JavaWeb/1-4-JDBC%E5%B8%B8%E7%94%A8API/" rel="next" title="1.4 JDBC常用API概述">
+                <i class="fa fa-chevron-left"></i> 1.4 JDBC常用API概述
               </a>
             
           </div>
@@ -419,10 +385,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3.2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87(%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF%E3%80%81%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4%E3%80%81%E4%B8%A2%E5%8C%85%E7%8E%87)/" rel="prev" title="1.3.2计算机网络性能指标(时延带宽积、往返时间、丢包率)">
-                1.3.2计算机网络性能指标(时延带宽积、往返时间、丢包率) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -547,7 +509,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E5%B9%B6%E8%BD%AC%E6%8D%A2%E5%89%8D%E7%AB%AF%E5%92%8C%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">解析并转换前端和日期格式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">使用注解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DateTimeFormat"><span class="nav-number">3.1.</span> <span class="nav-text">@DateTimeFormat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JsonFormat"><span class="nav-number">3.2.</span> <span class="nav-text">@JsonFormat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">3.3.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">5.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">基本格式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3"><span class="nav-number">2.</span> <span class="nav-text">官方文档</span></a></li></ol></div>
             
 
           </div>

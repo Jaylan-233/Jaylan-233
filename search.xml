@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>1.5 JDBC URL</title>
+      <link href="/2023/09/04/JavaWeb/1-5-JDBC-URL/"/>
+      <url>/2023/09/04/JavaWeb/1-5-JDBC-URL/</url>
+      
+        <content type="html"><![CDATA[<h1 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h1><ul><li>表示数据库的用的</li></ul><blockquote><p>网站由网址作为表示 对于数据库而言也由对应的URL作为标识</p></blockquote><h2 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h2><p><img src="/1-5-JDBC-URL.assets/image-20230904220531933.png" alt="image-20230904220531933"></p><span id="more"></span><h1 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h1><p><a href="https://dev.mysql.com/doc/connector-j/8.1/en/connector-j-reference-jdbc-url-format.html">https://dev.mysql.com/doc/connector-j/8.1/en/connector-j-reference-jdbc-url-format.html</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaWeb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1.4 JDBC常用API概述</title>
+      <link href="/2023/09/04/JavaWeb/1-4-JDBC%E5%B8%B8%E7%94%A8API/"/>
+      <url>/2023/09/04/JavaWeb/1-4-JDBC%E5%B8%B8%E7%94%A8API/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-Driver接口"><a href="#1-Driver接口" class="headerlink" title="1.Driver接口"></a>1.Driver接口</h1><ul><li>所有JDBC驱动必须实现的接口(数据库厂商来实现)</li></ul><hr><p><strong>Q:主要是用来干嘛的?</strong></p><p>A:用来装在驱动的</p><p>可以通过java.lang.Class中的forName()来<strong>装载</strong>驱动</p><hr><h1 id="2-DriverManager接口"><a href="#2-DriverManager接口" class="headerlink" title="2.DriverManager接口"></a>2.DriverManager接口</h1><ul><li><strong>加载</strong>JDBC驱动的</li></ul><blockquote><p>使用registerDriver()注册驱动程序 (和formName的功能相同)</p></blockquote><ul><li>用来建立连接的</li></ul><blockquote><p>使用getConection()来获取和数据库的连接</p></blockquote><span id="more"></span><h1 id="3-Connection接口"><a href="#3-Connection接口" class="headerlink" title="3.Connection接口"></a>3.Connection接口</h1><ul><li>用来完成和数据库进行<strong>交互</strong>的</li></ul><blockquote><p>给数据库发送SQL对象的</p></blockquote><h1 id="4-Statment接口"><a href="#4-Statment接口" class="headerlink" title="4.Statment接口"></a>4.Statment接口</h1><ul><li>执行SQL语句的</li></ul><h1 id="5-PreparedStament接口"><a href="#5-PreparedStament接口" class="headerlink" title="5.PreparedStament接口"></a>5.PreparedStament接口</h1><ul><li>也是执行SQL语句的(执行的是预编译的SQL语句)</li><li>继承自Stament接口</li></ul><h1 id="6-CallableStament接口"><a href="#6-CallableStament接口" class="headerlink" title="6.CallableStament接口"></a>6.CallableStament接口</h1><ul><li>用来调用SQL的存储过程的</li><li>继承自PreparedStament接口</li></ul><h1 id="7-ResultSet-接口"><a href="#7-ResultSet-接口" class="headerlink" title="7.ResultSet 接口"></a>7.ResultSet 接口</h1><ul><li>用来执行select语句获得的结果集的(操作结果集的)</li><li>操作结果集合中的行</li></ul><blockquote><p>ResultSet中维护了一个指针指针<strong>默认在第一行之间前</strong>使用next() 或者previous()方法可以移动指针 指向具体的数据库行</p></blockquote><h1 id="8-ResultMetaData接口"><a href="#8-ResultMetaData接口" class="headerlink" title="8.ResultMetaData接口"></a>8.ResultMetaData接口</h1><ul><li>操作结果集用的</li><li>操作结果集中的列</li></ul><h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://docs.oracle.com/javase/8/docs/api/java/sql/package-summary.html">https://docs.oracle.com/javase/8/docs/api/java/sql/package-summary.html</a></p><p><a href="https://dev.mysql.com/doc/connector-j/8.1/en/">https://dev.mysql.com/doc/connector-j/8.1/en/</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaWeb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>1.2因特网概述</title>
       <link href="/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2%E5%9B%A0%E7%89%B9%E7%BD%91%E6%A6%82%E8%BF%B0/"/>
       <url>/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2%E5%9B%A0%E7%89%B9%E7%BD%91%E6%A6%82%E8%BF%B0/</url>
