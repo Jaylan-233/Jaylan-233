@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaWeb," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="获取驱动Jar包MySQL :: Download MySQL Connector&#x2F;J (Archived Versions)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JDBC基础操作">
+<meta property="og:url" content="hhttps://Jaylan-233.github.io/2023/09/05/JavaWeb/JDBC基础操作/index.html">
+<meta property="og:site_name" content="Jaylan&#39;s Blog">
+<meta property="og:description" content="获取驱动Jar包MySQL :: Download MySQL Connector&#x2F;J (Archived Versions)">
+<meta property="og:locale">
+<meta property="og:image" content="hhttps://Jaylan-233.github.io/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/dbfb1f5b-8189-4ab8-8ee5-338a2a1f39aa.png">
+<meta property="og:image" content="hhttps://Jaylan-233.github.io/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/674231a0-5223-4880-9be3-6fe5b538b1ed.png">
+<meta property="og:image" content="hhttps://Jaylan-233.github.io/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/5ae9c8e7-6801-4ed2-8a38-9e80ba446745.png">
+<meta property="og:image" content="hhttps://Jaylan-233.github.io/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/41663b81-6d08-45d3-bca3-96976262c9e4.png">
+<meta property="og:image" content="hhttps://Jaylan-233.github.io/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/48754ed3-4b1f-4d3f-b168-a5d5126e76e8.png">
+<meta property="og:image" content="hhttps://Jaylan-233.github.io/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/04bd4517-95ba-4995-a73a-a8a7de51e012.png">
+<meta property="article:published_time" content="2023-09-05T15:12:59.000Z">
+<meta property="article:modified_time" content="2023-09-05T15:14:05.747Z">
+<meta property="article:author" content="Jaylan">
+<meta property="article:tag" content="JavaWeb">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="hhttps://Jaylan-233.github.io/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/dbfb1f5b-8189-4ab8-8ee5-338a2a1f39aa.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="hhttps://Jaylan-233.github.io/2023/09/05/JavaWeb/JDBC基础操作/"/>
+
+
+
+
+
+  <title>JDBC基础操作 | Jaylan's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jaylan's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">沉着冷静,百福自集</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="hhttps://Jaylan-233.github.io/2023/09/05/JavaWeb/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaylan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JDBC基础操作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-09-05T23:12:59+08:00">
+                2023-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="获取驱动Jar包"><a href="#获取驱动Jar包" class="headerlink" title="获取驱动Jar包"></a>获取驱动Jar包</h1><p><a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/c-j/">MySQL :: Download MySQL Connector/J (Archived Versions)</a></p>
+<p><img src="/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/dbfb1f5b-8189-4ab8-8ee5-338a2a1f39aa.png" alt="image.png"></p>
+<span id="more"></span>
+
+<h1 id="将Jar包作为依赖"><a href="#将Jar包作为依赖" class="headerlink" title="将Jar包作为依赖"></a>将Jar包作为依赖</h1><ul>
+<li>打开项目结构</li>
+</ul>
+<p><img src="/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/674231a0-5223-4880-9be3-6fe5b538b1ed.png" alt="image.png"></p>
+<ul>
+<li>选择要导入的模块并选择要导入jar包类型的依赖</li>
+</ul>
+<p><img src="/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/5ae9c8e7-6801-4ed2-8a38-9e80ba446745.png" alt="image.png"></p>
+<ul>
+<li>选择依赖</li>
+</ul>
+<p><img src="/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/41663b81-6d08-45d3-bca3-96976262c9e4.png" alt="image.png"></p>
+<h1 id="编写JDBC程序的基本步骤"><a href="#编写JDBC程序的基本步骤" class="headerlink" title="编写JDBC程序的基本步骤"></a>编写JDBC程序的基本步骤</h1><ul>
+<li>加载并注册驱动 Driver类</li>
+<li>获取数据库连接</li>
+<li>获取SQL执行者 Stament对象</li>
+<li>执行SQL语句</li>
+<li>获取结果集合</li>
+<li>释放连接资源</li>
+</ul>
+<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.<span class="property">sql</span>.*;</span><br><span class="line">public <span class="keyword">class</span> <span class="title class_">TestJDBC</span> {</span><br><span class="line">    public <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span>(<span class="title class_">String</span>[] args) throws <span class="title class_">ClassNotFoundException</span>, <span class="title class_">SQLException</span> {</span><br><span class="line"><span class="comment">//        加载数据库驱动</span></span><br><span class="line">        <span class="title class_">Class</span>.<span class="title function_">forName</span>(<span class="string">"com.mysql.cj.jdbc.Driver"</span>);</span><br><span class="line"><span class="comment">//       进行数据的连接</span></span><br><span class="line"><span class="comment">//        设置连接参数</span></span><br><span class="line">        <span class="title class_">String</span> url = <span class="string">"jdbc:mysql://localhost:3306/chapter01"</span>;</span><br><span class="line"><span class="comment">//这里的chapter01指的是数据库名称</span></span><br><span class="line">        <span class="title class_">String</span> user = <span class="string">"root"</span>;</span><br><span class="line">        <span class="title class_">String</span> password = <span class="string">"Xi233"</span>;</span><br><span class="line"><span class="comment">//                创建数据库连接</span></span><br><span class="line">        <span class="title class_">Connection</span> conn = <span class="title class_">DriverManager</span>.<span class="title function_">getConnection</span>(url, user, password);</span><br><span class="line"><span class="comment">//                  创建Statement对象用于向数据库发送SQL语句</span></span><br><span class="line">        <span class="title class_">Statement</span> statement = conn.<span class="title function_">createStatement</span>();</span><br><span class="line"><span class="comment">//                  要执行的SQL语句</span></span><br><span class="line">        <span class="title class_">String</span> selectSql = <span class="string">"select * from student;"</span>;</span><br><span class="line"><span class="comment">//          创建Result对象用来保存结果集</span></span><br><span class="line">        <span class="title class_">ResultSet</span> resultSet;</span><br><span class="line"><span class="comment">//           执行查询操作</span></span><br><span class="line">        resultSet = statement.<span class="title function_">executeQuery</span>(selectSql);</span><br><span class="line"><span class="comment">//        如果结果集合中有下一行数据就继续执行</span></span><br><span class="line">        <span class="keyword">while</span> (resultSet.<span class="title function_">next</span>()) {</span><br><span class="line"><span class="comment">//            根据属性获取对应的记录</span></span><br><span class="line">            int id = resultSet.<span class="title function_">getInt</span>(<span class="string">"sid"</span>);</span><br><span class="line">            <span class="title class_">String</span> name = resultSet.<span class="title function_">getString</span>(<span class="string">"sname"</span>);</span><br><span class="line">            <span class="title class_">String</span> course = resultSet.<span class="title function_">getString</span>(<span class="string">"course"</span>);</span><br><span class="line">            <span class="title class_">System</span>.<span class="property">out</span>.<span class="title function_">println</span>(id + <span class="string">"|"</span> + name + <span class="string">"|"</span> + course);</span><br><span class="line"></span><br><span class="line">        }</span><br><span class="line"><span class="comment">//        关闭资源</span></span><br><span class="line">        <span class="comment">/*释放结果集资源*/</span></span><br><span class="line">        resultSet.<span class="title function_">close</span>();</span><br><span class="line">        <span class="comment">/*释放SQL执行者对象资源*/</span></span><br><span class="line">        statement.<span class="title function_">close</span>();</span><br><span class="line">        <span class="comment">/*关闭连接*/</span></span><br><span class="line">        conn.<span class="title function_">close</span>();</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h1><h2 id="时区设置问题"><a href="#时区设置问题" class="headerlink" title="时区设置问题"></a>时区设置问题</h2><blockquote>
+<p>The server time zone value ‘ÖÐ¹ú±ê×¼Ê±¼ä’ is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.</p>
+</blockquote>
+<h3 id="问题产生原因"><a href="#问题产生原因" class="headerlink" title="问题产生原因"></a>问题产生原因</h3><ul>
+<li>连接数据库时没有设置好时区</li>
+<li>默认设置的时区有问题</li>
+</ul>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p><strong>解决办法1</strong></p>
+<ul>
+<li>连接数据库时设置时区参数</li>
+</ul>
+<p>在连接数据库的URL后加上</p>
+<blockquote>
+<p>?serverTimezone=UTC</p>
+</blockquote>
+<p><img src="/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/48754ed3-4b1f-4d3f-b168-a5d5126e76e8.png" alt="image.png"></p>
+<p><strong>解决办法2</strong></p>
+<ul>
+<li>设置数据的中的默认时区</li>
+</ul>
+<p><img src="/JDBC%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.assets/04bd4517-95ba-4995-a73a-a8a7de51e012.png" alt="image.png"></p>
+<blockquote>
+<p>这样设置了之后就不用在连接时设置时区了</p>
+</blockquote>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><ul>
+<li>使用JDBC连接到数据库时需要导入数据库厂商提供的驱动(jar包形式)</li>
+<li>编写JDBC程序的基本步骤为<ul>
+<li>加载数据库驱动</li>
+<li>注册驱动</li>
+<li>获取连接</li>
+<li>获取SQL执行者对象</li>
+<li>使用SQL执行者对象执行SQL语句</li>
+<li>使用ResultSet对象操作结果集合(使用next()判断下一条记录释是否存在)</li>
+<li>释放资源(注意先后顺序 结果集→SQL执行者对象→连接对象)</li>
+</ul>
+</li>
+<li>连接数据库时可能因为没设置时区而报错<ul>
+<li>可以设置数据库的URL时加上时区参数</li>
+<li>也可以直接到给数据库中设置默认的时区(设置完成就不用在URL中添加时区参数了)</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaWeb/" rel="tag"># JavaWeb</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/09/04/JavaWeb/1-5-JDBC-URL/" rel="next" title="1.5 JDBC URL">
+                <i class="fa fa-chevron-left"></i> 1.5 JDBC URL
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E9%A9%B1%E5%8A%A8Jar%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">获取驱动Jar包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%86Jar%E5%8C%85%E4%BD%9C%E4%B8%BA%E4%BE%9D%E8%B5%96"><span class="nav-number">2.</span> <span class="nav-text">将Jar包作为依赖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E5%86%99JDBC%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">编写JDBC程序的基本步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">3.1.</span> <span class="nav-text">代码示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">可能遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E5%8C%BA%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98"><span class="nav-number">4.1.</span> <span class="nav-text">时区设置问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0"><span class="nav-number">4.1.1.</span> <span class="nav-text">问题产生原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-number">4.1.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jaylan</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
